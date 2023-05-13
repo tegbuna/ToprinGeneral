@@ -1,0 +1,48 @@
+import React, { useEffect, useRef } from 'react';
+import './CSS/Carousel.css';
+
+const Carousel = () => {
+  const carouselRef = useRef(null);
+
+  useEffect(() => {
+    const carousel = carouselRef.current;
+    const intervalId = setInterval(() => {
+      if (carousel.scrollLeft >= carousel.scrollWidth - carousel.offsetWidth) {
+        carousel.scrollTo({
+          left: 0,
+          behavior: 'smooth'
+        });
+      } else {
+        carousel.scrollBy({
+          left: carousel.offsetWidth,
+          behavior: 'smooth'
+        });
+      }
+    }, 3000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
+  return (
+    <div className="hook-carousel" ref={carouselRef}>
+    <div className="hook-item">
+      <div className="titles">Need an Airbag Module Reset?</div>
+      <p id="hook-sub">(Keep scrolling to access the form and submit your request today.)</p>
+    </div>
+    <div className="hook-item">
+      <div className="titles">Need a new key? We'll come to you.</div>
+      <p id="hook-sub">(Call right now to book your appointment.)</p>
+    </div>
+    <div className="hook-item">
+      <div className="titles">Om Location Repair Services</div>
+      <p id="hook-sub">(Bring it to us or let us come to you.)</p>
+    </div>
+    <div className="hook-item">
+      <div className="titles">Car Keys | Key Fobs | Keyless Remotes | Smart Keys</div>
+      <p id="hook-sub">(We have all the key solutions for your vehicle.)</p>
+    </div>
+  </div>
+  );
+};
+
+export default Carousel;

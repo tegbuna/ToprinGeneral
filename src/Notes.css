@@ -1,0 +1,148 @@
+/* Fonts  */
+
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;600;800&family=Inter:wght@100;300;500;900&family=Montserrat:wght@100;300;500;900&family=Noto+Sans+JP:wght@100;300;500;900&family=Nunito:wght@200;400;600;800;1000&family=Raleway:ital,wght@0,100;0,500;0,900;1,300&family=Roboto:ital,wght@0,100;0,300;0,500;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:wght@300;400;500;600;700;800;900');
+@import url('https://fonts.googleapis.com/css?family=Lato:wght@100;300;400;700;900');
+@import url('https://fonts.googleapis.com/css?family=Proxima+Nova:wght@300;400;600;700;800');
+@import url('https://fonts.googleapis.com/css?family=Georgia:wght@300;400;700');
+
+
+/* **** Hero code with scroll/handleClick */
+import { animateScroll } from 'react-scroll';
+
+const Hero = () => {
+  const handleButtonClick = () => {
+    animateScroll.scrollTo('services', {
+      duration: 500,
+      delay: 100,
+      smooth: true,
+      offset: -55,
+    });
+  };
+
+  return (
+    <div className='hero' id='home'>
+      <div className="main-hero">
+        <div className="value-prop-container">
+          <div className="value-prop">
+            <div className="titles" id="super-title">
+              <div>
+                Your One-Stop Solution for Automotive Repairs
+              </div>
+            </div>
+            <div className="card-body" id="hero-subtitle">
+              <p> At Toprin General, we take pride in our fast, efficient, friendly service.  We use state-of-the-art equipment to provide comprehensive automotive services including airbag module reset, car & key programming, and instrument cluster repair.  Trust us to handle all your vehicle maintenance and repair needs.</p>
+            </div>
+            <a href="/" id="cta-button">Get Started Now</a>
+          </div>
+          <img className="hero-image" src="https://i.imgur.com/l0rnGGj.png" alt="Illustration of Car  & Services" />
+        </div>
+      </div>
+
+      <div className="responsive-hero">
+        <div className="value-prop-container">
+          <div className="value-prop" id="value-prop-id">
+            <div className="titles">
+              <div>
+                Your One-Stop Solution for Automotive Repairs
+              </div>
+            </div>
+            <div className="card-body">
+              <p> At Toprin General, we take pride in our fast, efficient, friendly service.  We use state-of-the-art equipment to provide comprehensive automotive services including airbag module reset, car & key programming, and instrument cluster repair.  Trust us to handle all your vehicle maintenance and repair needs.</p>
+
+            </div>
+          </div>
+
+          <img className="hero-image" src="https://i.imgur.com/l0rnGGj.png" alt="Illustration of Car & Services" />
+          {/* <img className="hero-image" src="https://i.imgur.com/uMmiomi.jpg" alt="Image of company product" /> */}
+        </div>
+
+        /* <div id="cta-button"
+          style={{
+            backgroundColor: 'var(--purple-color)',
+            color: 'var(--bg-color)',
+            border: '0px solid var(--purple-color)'
+          }}
+          onClick={handleButtonClick}
+          onMouseOver={e => {
+            e.currentTarget.style.backgroundColor = 'var(--bg-color)';
+            e.currentTarget.style.color = 'var(--purple-color)';
+            e.currentTarget.style.border = '0px solid var(--bg-color)';
+          }}
+          onMouseOut={e => {
+            e.currentTarget.style.backgroundColor = 'var(--purple-color)';
+            e.currentTarget.style.color = 'var(--bg-color)';
+            e.currentTarget.style.border = '.75px solid var(--bg-color)';
+          }}
+        >
+          Get Started Now
+        </div> */
+      </div>
+
+      <div className="hook">
+        <div className="title" id="purple">Need an Airbag Module Reset?</div>
+        <p className="hook-sub">(Keep scrolling to access the form and submit your request today.)</p>
+      </div>
+    </div>
+  )
+}
+
+export default Hero;
+
+
+
+
+
+
+
+
+
+/* Hero conflicting sytles */
+
+/* .hero {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url('../images/background.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: clamp(1.5rem, 4vw, 4rem);
+    text-shadow: 0 0 10px black, 0 0 20px black, 0 0 30px black, 0 0 40px black;
+  }
+  
+  .hero h1 {
+    font-size: clamp(3rem, 8vw, 10rem);
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 2rem;
+  } */
+/*   
+  .hero a {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 5rem;
+    transition: background-color 0.3s ease;
+  } */
+  
+  /* .hero a:hover {
+    background-color: white;
+    color: var(--accent-color);
+    cursor: pointer;
+  } */
+  
