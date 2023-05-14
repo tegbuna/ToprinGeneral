@@ -1,20 +1,14 @@
-import React from 'react';
-import { FormProvider } from '../context/FormContext';
-import  Form from "../components/Form";
-
+import React, { useContext } from "react";
+import { FormContext } from "../context/FormContext";
 
 const RequestServiceButton = () => {
-    return (
-<div className="RequestServicesButton">
-<div className="center-button">
-        <a className="center" id="cta-button" href="/" alt="Button to Order Service">Request Service</a>
-      </div> 
-              <FormProvider>
-              <Form />
-            </FormProvider>
-</div>
+  const { canSubmit } = useContext(FormContext);
 
-      )
-}
+  return (
+    <button type="submit" disabled={!canSubmit}>
+      Submit
+    </button>
+  );
+};
 
-export default RequestServiceButton
+export default RequestServiceButton;

@@ -1,29 +1,15 @@
-
-import React, { useRef } from 'react';
-<<<<<<< HEAD
-import { createContext, useState, useEffect } from "react";
-import "src/components/CSS/FormStyles.css";
-=======
-import './CSS/ContactForm.css';
-import { createContext, useState, useEffect } from "react";
->>>>>>> d5eaed2ea19b8ecc36dc9d8c30b05061a01df38d
+import React from "react";
+import { createContext, useState, useEffect } from "react"
 
 
-
-const FormContext = createContext({})
+export const FormContext = createContext({})
 
 export const FormProvider = ({ children }) => {
 
     const title = {
-        0: 'Srvice Request',
-        1: 'Service Location',
-        2: 'Issue Description',
-        3: 'Vehicle Information',
-        4: 'Contact Information',
-        5: 'Acccount',
-        6: 'Billing Information',
-        7: 'Shipping Information',
-        8: 'OptIn',
+        0: 'Billing Info',
+        1: 'Shipping Info',
+        2: 'Opt-In'
     }
 
     const [page, setPage] = useState(0)
@@ -84,14 +70,12 @@ export const FormProvider = ({ children }) => {
             ? e.target.checked
             : e.target.value
 
-            // Can use below later to define additonal handleChange/setState :
         setData(prevData => ({
             ...prevData,
             [name]: value
         }))
     }
- 
-    // May need to define additional required inputs below:
+
     const {
         billAddress2,
         sameAsBilling,
@@ -130,5 +114,3 @@ export const FormProvider = ({ children }) => {
         </FormContext.Provider>
     )
 }
-
-export default FormContext 

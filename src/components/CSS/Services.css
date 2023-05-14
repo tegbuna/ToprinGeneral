@@ -81,11 +81,7 @@ padding: 5%;
 .service-card>img {
   max-width: auto;
   height: auto;
-<<<<<<< HEAD
   object-fit: contain;
-=======
-  object-fit: cover;
->>>>>>> d5eaed2ea19b8ecc36dc9d8c30b05061a01df38d
   border-radius: 4px;
   border-bottom: .75px solid var(--ii-neutral-color);
 

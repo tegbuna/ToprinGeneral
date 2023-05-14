@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useRef } from 'react';
 import { FormProvider } from './FormProvider';
 import './CSS/FormStyles.css';
@@ -78,17 +77,3 @@ const ServiceRequest = () => {
 };
 
 export default ServiceRequest;
-=======
-import React from 'react';
-import "./CSS/ServiceRequested .css";
-
-
-
-const ServiceRequested  = () => {
-  return (
-    <div>ServiceRequested </div>
-  )
-}
-
-export default ServiceRequested 
->>>>>>> d5eaed2ea19b8ecc36dc9d8c30b05061a01df38d

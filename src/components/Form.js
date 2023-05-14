@@ -1,84 +1,71 @@
-import React from 'react'
-import FormInputs from './FormInputs'
-import useFormContext from "../hooks/useFormContext"
-<<<<<<< HEAD
+import React from 'react';
+import { FormContext } from '../context/FormContext';
+import FormInputs from './FormInputs';
+import useFormContext from '../hooks/useFormContext';
 import './CSS/FormStyles.css';
-=======
-import './CSS/ContactForm.css';
->>>>>>> d5eaed2ea19b8ecc36dc9d8c30b05061a01df38d
-
 
 const Form = () => {
+  const {
+    page,
+    setPage,
+    data,
+    title,
+    canSubmit,
+    disablePrev,
+    disableNext,
+    prevHide,
+    nextHide,
+    submitHide,
+  } = useFormContext();
 
-    const {
-        page,
-        setPage,
-        data,
-        title,
-        canSubmit,
-        disablePrev,
-        disableNext,
-        prevHide,
-        nextHide,
-        submitHide
-    } = useFormContext()
+  const handlePrev = () => setPage((prev) => prev - 1);
 
-    const handlePrev = () => setPage(prev => prev - 1)
+  const handleNext = () => setPage((prev) => prev + 1);
 
-    const handleNext = () => setPage(prev => prev + 1)
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(JSON.stringify(data));
+  };
 
-    const handleSubmit = e => {
-        e.preventDefault()
-        console.log(JSON.stringify(data))
-    }
-
-
-    const content = (
-<<<<<<< HEAD
+  const content = (
+    <FormContext.Consumer>
+      {({ data }) => (
         <form className="form flex-col" onSubmit={handleSubmit}>
-
-            <header className="form-header">
-                <h2>{title[page]}</h2>
-
-                <div className="button-container">
-
-                    <button className="submit-button" type="button" className={`button ${prevHide}`} onClick={handlePrev} disabled={disablePrev}>Prev</button>
-
-                    <button className="submit-button" type="button" className={`button ${nextHide}`} onClick={handleNext} disabled={disableNext}>Next</button>
-
-                    <button className="submit-button" type="submit" className={`button ${submitHide}`} disabled={!canSubmit}>Submit</button>
-                </div>
-            </header>
-
-
-            <FormInputs />
-
+          <header className="form-header">
+            <h2>{title[page]}</h2>
+            <div className="button-container">
+              <button
+                className={`button ${prevHide}`}
+                disabled={disablePrev}
+                onClick={handlePrev}
+                type="button"
+              >
+                Prev
+              </button>
+              <button
+                className={`button ${nextHide}`}
+                disabled={disableNext}
+                onClick={handleNext}
+                type="button"
+              >
+                Next
+              </button>
+              <button
+                className={`button ${submitHide}`}
+                disabled={!canSubmit}
+                type="submit"
+              >
+                Submit
+              </button>
+            </div>
+          </header>
+          <FormInputs />
         </form>
-=======
-<div className="form-container">
-<form  onSubmit={handleSubmit}>
+      )}
+    </FormContext.Consumer>
+  );
 
-<header className='title'>
-    <h2>{title[page]}</h2>
+  return content;
+};
 
-    <div className="button-container">
-
-        <buttonc className="submit-button" type="button" className={`button ${prevHide}`} onClick={handlePrev} disabled={disablePrev}> Prev</button>
-
-        <button className="submit-button" type="button" className={`button ${nextHide}`} onClick={handleNext} disabled={disableNext}>Next </button>
-
-        <button className="submit-button" type="submit" className={`button ${submitHide}`} disabled={!canSubmit}>Submit</button>
-    </div>
-</header>
-
-
-<FormInputs />
-
-</form>
-</div>
->>>>>>> d5eaed2ea19b8ecc36dc9d8c30b05061a01df38d
-    )
-
-    return content
-}
-export default Form
+export default Form;
