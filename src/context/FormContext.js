@@ -1,7 +1,12 @@
 
 import React, { useRef } from 'react';
+<<<<<<< HEAD
+import { createContext, useState, useEffect } from "react";
+import "src/components/CSS/FormStyles.css";
+=======
 import './CSS/ContactForm.css';
 import { createContext, useState, useEffect } from "react";
+>>>>>>> d5eaed2ea19b8ecc36dc9d8c30b05061a01df38d
 
 
 

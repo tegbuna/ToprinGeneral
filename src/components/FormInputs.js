@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
+import './CSS/FormStyles.css';
+=======
 import './CSS/ContactForm.css';
+>>>>>>> d5eaed2ea19b8ecc36dc9d8c30b05061a01df38d
 import ServiceRequest from "./ServiceRequest ";
 import ServiceLocation from "./ServiceLocation ";
 import IssueDescription from "./IssueDecription";
