@@ -20,12 +20,12 @@ const Navbar = () => {
 
                 <div className='companylogo'>
                     <a href="www.toprinauto.site">
-                        <img src="https://i.imgur.com/MNe9hsZ.png" alt="Company Logo" />
+                        <img id="nav-logo" src="https://i.imgur.com/MNe9hsZ.png" alt="Company Logo" />
                     </a>
-                    <p>| 210.981.0459</p>
+                    <p className="micro-text">| 210.981.0459</p>
                 </div>
                 <div className="hamburger" onClick={handleClick}>
-                    {click ? (<AiOutlineClose size={24} style={{ color: "var(--white-white)" }} />) : (<VscMenu size={28} style={{ color: "var(--white-white)" }} />)}
+                    {click ? (<AiOutlineClose size={14} style={{ color: "var(--white-white)" }} />) : (<VscMenu size={28} style={{ color: "var(--white-white)" }} />)}
                 </div>
 
                 {/* KEEP NOTE - replace className of ul on menu for click event*/}
@@ -60,7 +60,7 @@ const Navbar = () => {
                 <div className="desktop-social-bar">
                     <div className="social">
                         <div className="social-list">
-                            <a className="youtube" href="https://www.facebook.com" rel="noreferrer" target="_blank"><SiFacebook /></a>
+                            <a className="facebook" href="https://www.facebook.com" rel="noreferrer" target="_blank"><SiFacebook /></a>
                             <a className="Instagram" href="https://www.Instagram.com" rel="noreferrer" target="_blank"><SiInstagram /></a>
                             <a className="youtube" href="https://www.youtube.com" rel="noreferrer" target="_blank"><SiYoutube /></a>
                             {/* <a className="Instagram" href="/" rel="noreferrer" target="_blank"><SiGmail/></a> */}

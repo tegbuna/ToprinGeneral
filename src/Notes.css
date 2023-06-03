@@ -1,3 +1,166 @@
+/* PRevious Hero.css */
+
+.hero,
+.hero * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  display: flex;
+  height: 100vh;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-container-1 {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 50vw;
+
+  padding: 0% 2% 0 5%;
+  align-self: flex-start;
+  /* color: var(--bg-color); */
+  max-height: 80vh;
+}
+
+.hero-container-2 {
+  flex: 0 1 50vw;
+
+  align-self: center;
+  height: auto;
+  padding: 0;
+  max-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-container-3 {
+  flex-basis: 100%;
+  min-width: 100vw;
+  padding-top: 2%;
+}
+
+.hero img {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+#super-title {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+
+.hook {
+  width: 100%;
+}
+
+.hero-button {
+  align-self: flex-start;
+  padding: 3% 0;
+  align-content: center;
+  /* color: var(--electric-blue) !important; */
+}
+
+
+#super-title {
+  display: flex;
+  text-align: left;
+  padding: 3% 0 !important;
+  font-size: var(--f-xl);
+}
+
+#hero-subtitle {
+  text-align: left;
+  color: var(--bg-color) !important;
+  line-height: calc(1.25rem * 1.618);
+}
+
+/* MEDIA QUERIES */
+/* @media (max-width: 1080px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-text {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  #hero-text-container {
+    max-width: 100%;
+    padding: 3%;
+    text-align: center;
+    align-self: center;
+
+  }
+
+  #hero-image {
+    padding: 0;
+    width: 100%;
+  }
+
+  .hero-button {
+    align-self: center;
+    justify-self: flex-start;
+  }
+
+  #hero-subtitle {
+    text-align: center;
+    padding: 5%;
+    font-size: 1.25rem;
+  }
+
+    .hook {
+      max-width: 100vw;
+    }
+  } */
+
+
+
+
+/* Previous Hero.js */
+
+import React from "react";
+
+import {
+  animateScroll
+}
+
+from 'react-scroll';
+import './CSS/Hero.css';
+import Carousel from "./Carousel.js"
+
+const Hero=()=> {
+  const handleButtonClick=()=> {
+    animateScroll.scrollTo('services', {
+      duration: 500,
+      delay: 100,
+      smooth: true,
+      offset: -55,
+    });
+}
+
+;
+
+return (<div className="hero" > <div className="hero-text" > <div className="hero-con hero-container-1" id="hero-text-container" > <div className="super-title" > <div> Your One-Stop Solution for Automotive Repairs </div> </div> <div className="card-body" id="hero-subtitle" > <p> At Toprin General, we take pride in our fast, efficient, friendly service. We use state-of-the-art equipment to provide comprehensive automotive services including airbag module reset, car & key programming, and instrument cluster repair. Trust us to handle all your vehicle maintenance and repair needs. </p> </div> <div className="hero-button" > <a href="/" className="cta-button" >Get Started Now</a> </div> </div> <div className="hero-container hero-container-2" > <img className="hero-image" src="https://i.imgur.com/QS95J5y.png" alt="Illustration of Car  & Services" /> </div> </div> <div className="hero-container hero-container-3" > <div className="hook" > <Carousel /> </div> </div> </div>);
+}
+
+;
+
+export default Hero;
+
 /* Fonts  */
 
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;600;800&family=Inter:wght@100;300;500;900&family=Montserrat:wght@100;300;500;900&family=Noto+Sans+JP:wght@100;300;500;900&family=Nunito:wght@200;400;600;800;1000&family=Raleway:ital,wght@0,100;0,500;0,900;1,300&family=Roboto:ital,wght@0,100;0,300;0,500;1,900&display=swap');
@@ -9,56 +172,30 @@
 
 
 /* **** Hero code with scroll/handleClick */
-import { animateScroll } from 'react-scroll';
+import {
+  animateScroll
+}
 
-const Hero = () => {
-  const handleButtonClick = () => {
+from 'react-scroll';
+
+const Hero=()=> {
+  const handleButtonClick=()=> {
     animateScroll.scrollTo('services', {
       duration: 500,
       delay: 100,
       smooth: true,
       offset: -55,
     });
-  };
+}
 
-  return (
-    <div className='hero' id='home'>
-      <div className="main-hero">
-        <div className="value-prop-container">
-          <div className="value-prop">
-            <div className="titles" id="super-title">
-              <div>
-                Your One-Stop Solution for Automotive Repairs
-              </div>
-            </div>
-            <div className="card-body" id="hero-subtitle">
-              <p> At Toprin General, we take pride in our fast, efficient, friendly service.  We use state-of-the-art equipment to provide comprehensive automotive services including airbag module reset, car & key programming, and instrument cluster repair.  Trust us to handle all your vehicle maintenance and repair needs.</p>
-            </div>
-            <a href="/" id="cta-button">Get Started Now</a>
-          </div>
-          <img className="hero-image" src="https://i.imgur.com/l0rnGGj.png" alt="Illustration of Car  & Services" />
-        </div>
-      </div>
+;
 
-      <div className="responsive-hero">
-        <div className="value-prop-container">
-          <div className="value-prop" id="value-prop-id">
-            <div className="titles">
-              <div>
-                Your One-Stop Solution for Automotive Repairs
-              </div>
-            </div>
-            <div className="card-body">
-              <p> At Toprin General, we take pride in our fast, efficient, friendly service.  We use state-of-the-art equipment to provide comprehensive automotive services including airbag module reset, car & key programming, and instrument cluster repair.  Trust us to handle all your vehicle maintenance and repair needs.</p>
+return (<div className='hero' id='home' > <div className="main-hero" > <div className="value-prop-container" > <div className="value-prop" > <div className="titles" id="super-title" > <div> Your One-Stop Solution for Automotive Repairs </div> </div> <div className="card-body" id="hero-subtitle" > <p> At Toprin General, we take pride in our fast, efficient, friendly service. We use state-of-the-art equipment to provide comprehensive automotive services including airbag module reset, car & key programming, and instrument cluster repair. Trust us to handle all your vehicle maintenance and repair needs.</p> </div> <a href="/" id="cta-button" >Get Started Now</a> </div> <img className="hero-image" src="https://i.imgur.com/l0rnGGj.png" alt="Illustration of Car  & Services" /> </div> </div> <div className="responsive-hero" > <div className="value-prop-container" > <div className="value-prop" id="value-prop-id" > <div className="titles" > <div> Your One-Stop Solution for Automotive Repairs </div> </div> <div className="card-body" > <p> At Toprin General, we take pride in our fast, efficient, friendly service. We use state-of-the-art equipment to provide comprehensive automotive services including airbag module reset, car & key programming, and instrument cluster repair. Trust us to handle all your vehicle maintenance and repair needs.</p> </div> </div> <img className="hero-image" src="https://i.imgur.com/l0rnGGj.png" alt="Illustration of Car & Services" /> {
+    /* <img className="hero-image" src="https://i.imgur.com/uMmiomi.jpg" alt="Image of company product" /> */
+  }
 
-            </div>
-          </div>
-
-          <img className="hero-image" src="https://i.imgur.com/l0rnGGj.png" alt="Illustration of Car & Services" />
-          {/* <img className="hero-image" src="https://i.imgur.com/uMmiomi.jpg" alt="Image of company product" /> */}
-        </div>
-
-        /* <div id="cta-button"
+  </div>
+  /* <div id="cta-button"
           style={{
             backgroundColor: 'var(--purple-color)',
             color: 'var(--bg-color)',
@@ -78,14 +215,7 @@ const Hero = () => {
         >
           Get Started Now
         </div> */
-      </div>
-
-      <div className="hook">
-        <div className="title" id="purple">Need an Airbag Module Reset?</div>
-        <p className="hook-sub">(Keep scrolling to access the form and submit your request today.)</p>
-      </div>
-    </div>
-  )
+  </div> <div className="hook" > <div className="title" id="purple" >Need an Airbag Module Reset?</div> <p className="paragraph" >(Keep scrolling to access the form and submit your request today.)</p> </div> </div>)
 }
 
 export default Hero;
@@ -139,10 +269,9 @@ export default Hero;
     border-radius: 5rem;
     transition: background-color 0.3s ease;
   } */
-  
-  /* .hero a:hover {
+
+/* .hero a:hover {
     background-color: white;
     color: var(--accent-color);
     cursor: pointer;
   } */
-  

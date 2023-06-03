@@ -29,8 +29,8 @@
   }
   
   .blog-article-footer button {
-    background-color: #000;
-    color: #fff;
+    /* background-color: #000; */
+    /* color: #fff; */
     font-size: 12px;
     border: none;
     cursor: pointer;

@@ -1,0 +1,73 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+  
+  @media (max-width: 1200px) {
+    .App {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  }
+
+  
+  @media (max-width: 768px) {
+    .App {
+      flex-direction: row;
+    }
+    .Navbar {
+      width: 100%;
+    }
+    .Hero {
+      margin-top: 0;
+      height: 100vh;
+    }
+    .Services {
+      margin-top: 20px;
+      width: 50%;
+    }
+    .Blog {
+      margin-top: 20px;
+      width: 50%;
+    }
+    .ContactForm {
+      margin-top: 20px;
+      width: 100%;
+    }
+    .Footer {
+      /* background-color: var(--slick-gradient); */
+      height: 60px;
+      padding: 10px 0;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .Navbar {
+      height: 70px;
+    }
+    .Hero {
+      height: 200px;
+    }
+    .Services {
+      margin-top: 10px;
+      width: 100%;
+    }
+    .Blog {
+      margin-top: 10px;
+      width: 100%;
+    }
+    .ContactForm {
+      margin-top: 10px;
+      width: 100%;
+    }
+    .Footer {
+      height: 30px;
+      padding: 5px 0;
+    }
+  }
+  
