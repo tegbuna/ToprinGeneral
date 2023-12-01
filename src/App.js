@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
 import Blog from "./components/Blog";
+import ContactForm from "./components/ContactForm"
 // import ServiceRequestForm from './components/ServiceRequestForm';
 // import OrderServiceForm from './components/OrderServiceForm';
 // import OrderService from './components/OrderService';
@@ -19,7 +20,7 @@ const App = () => {
           <Hero />
           <Services title="Services" />
           <Blog title="Blog Topics" />
-          {/* <ContactForm title="Ask a Question or Get a Quote" /> */}
+          <ContactForm title="Ask a Question or Get a Quote" />
           {/* <ServiceRequestForm title="Ask a Question or Get a Quote" /> */}
           {/* <OrderServiceForm /> */}
           {/* <OrderService /> */}
@@ -31,7 +32,7 @@ const App = () => {
           <Hero />
           <Services title="Services" />
           <Blog title="Blog Topics" />
-          {/* <ContactForm title="Ask a Question or Get a Quote" /> */}
+          <ContactForm title="Ask a Question or Get a Quote" />
           <Footer />
         </div>
       )}
